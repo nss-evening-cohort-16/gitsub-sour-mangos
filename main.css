@@ -1,0 +1,19 @@
+body{
+    background-color: #0d1117;
+    display: inline-block;
+ 
+}
+
+
+
+.navbar{
+    width:100%; 
+    position: relative;
+    left: 500px; 
+}   
+   
+.profile-card{
+    position: relative;
+    top: 4px;
+    left: 150px; 
+}
