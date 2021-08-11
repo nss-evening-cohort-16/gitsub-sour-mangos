@@ -57,30 +57,26 @@
       <h6>Sponsors</h6>
     </ul>
   </div>
-
-<div id="formContainer" >
-  <div class="card" style="width: 18rem;">
+<div id="loopContainer"></div>
+<form id="projectFormContainer" >
+  <div class="card" >
     <div class="card-body">
-    <h5 class="card-title">Create a new repository</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one piece, so projects stay transparent and on schedule.</h6>
-    <p class="card-text">Input extra text needed here</p>
-   
-    <p class="card-text">Repository Name:</p>
+    <h5 class="card-title">Create a new project</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one place, so projects stay transparent and on schedule.</h6>
+     <p class="card-text">Project board name:</p>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <textarea class="form-control" id="nameInput" ></textarea>
       <label for="floatingTextarea"></label>
     </div>
-
-    <p class="card-text">Description:</p>
+    <p class="card-text">Description(optional):</p>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+      <textarea class="form-control"id="descriptionInput"></textarea>
       <label for="floatingTextarea2"></label>
     </div>
-
-    <button type="button" class="btn btn-primary">Create Repository</button>
+<button type="submit" id="createProjectBtn" class="btn btn-primary">Create Project</button>
     </div>
   </div>
-</div>
+</form>
 
   <div id="footerContainer">
     <nav class="nav justify-content-center">
@@ -101,6 +97,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script type="module" src="main.js"></script>
+  <script type="module" src="projectsData.js"></script>
 </body>
 </html>

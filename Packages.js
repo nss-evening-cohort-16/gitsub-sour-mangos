@@ -1,4 +1,7 @@
-import 
+const renderToDom = (divId, textToPrint) => {
+    const selectedDiv = document.querySelector(divId);
+    selectedDiv.innerHTML = textToPrint;
+  };
 
 let packages = [
     {name: "Docker",
@@ -15,19 +18,41 @@ let packages = [
     description: "A single place for your team to manage Docker images and decide who can see and access your images."}
 ];
 
-const cardBuilder = (packages) => {
+const cardBuilder = (array) => {
     let domString = "";
-    packages.array.forEach((package) => {
+    array.forEach((taco) => {
         domString += `
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">${package.name}</h5>
-                <p class="card-text">${package.description}</p>
+                <h5 class="card-title" id="n">${taco.name}</h5>
+                <p class="card-text" id="d">${taco.description}</p>
                 <a href="#" class="btn btn-primary">Delete</a>
             </div>
         </div>`
     });
-    renderToDom
+    renderToDom("#cardsContainer", domString);
 };
 
+const handleFormSubmit = (event) => {
+    event.preventDefault();
+    const newPackage = {
+        name: document.querySelector('#packageName').value,
+        description: document.querySelector('#packageDescription').value
+    };
+    packages.push(newPackage);
+    cardBuilder(packages);
+    document.querySelector('#formContainer').reset();
+};
 
+const buttonEvents = () => {
+    document
+    .querySelector('#formContainer')
+    .addEventListener("submit", handleFormSubmit);
+};
+
+const loadPage = () => {
+    cardBuilder(packages);
+    buttonEvents();
+};
+
+loadPage();

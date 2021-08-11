@@ -60,29 +60,25 @@
 
 <div id="cardsContainer"></div>
 
-<div id="formContainer" >
+<form id="formContainer" >
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-    <h5 class="card-title">Create a new repository</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one piece, so projects stay transparent and on schedule.</h6>
-    <p class="card-text">Input extra text needed here</p>
-   
-    <p class="card-text">Repository Name:</p>
+    <h5 class="card-title">Add a New Package</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Safely publish packages, store your packages alongside your code, and share your packages privately with your team.</h6>
+    <p class="card-text">Package Name:</p>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <textarea id="packageName" class="form-control" placeholder="Leave a comment here"></textarea>
       <label for="floatingTextarea"></label>
     </div>
-
-    <p class="card-text">Description:</p>
+    <p class="card-text">Description (optional):</p>
     <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+      <textarea id="packageDescription" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
       <label for="floatingTextarea2"></label>
     </div>
-
-    <button type="button" class="btn btn-primary">Create Repository</button>
+    <button type="submit" class="btn btn-primary">Create Package</button>
     </div>
   </div>
-</div>
+</form>
 
   <div id="footerContainer">
     <nav class="nav justify-content-center">
