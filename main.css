@@ -9,11 +9,11 @@ body{
 .navbar{
     width:100%; 
     position: relative;
-    left: 500px; 
+    left: 425px; 
 }   
    
 .profile-card{
     position: relative;
-    top: -10;
-    left: 150px; 
+    top: 0px;
+    left: 100px; 
 }
