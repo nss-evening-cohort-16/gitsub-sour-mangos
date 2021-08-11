@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <div id="navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -29,9 +30,9 @@
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-      <h4 class="card-title">Name</h4>
+      <h4 class="card-title">firstName lastName</h4>
       <h5 class="card-text">username</h5>
-      <p>Bio</p>
+      <p>Building tech to elevate people. Founder of React Ladies a community for React JS developers.</p>
       <button type="button" class="btn btn-secondary">Follow</button>
       <button type="button" class="btn btn-secondary">Sponsor</button>
       <button type="button" class="btn btn-secondary">...</button>
@@ -58,30 +59,33 @@
     </ul>
   </div>
 
-<div id="formContainer" >
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h5 class="card-title">Create a new repository</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one piece, so projects stay transparent and on schedule.</h6>
-    <p class="card-text">Input extra text needed here</p>
+  <!-- CARD CONTAINER -->
+  <div id="cardContainer"></div>
+
+  <!-- FORM -->
+  <form id="formContainer" >
+    <form class="card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Create a new project</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
    
-    <p class="card-text">Repository Name:</p>
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-      <label for="floatingTextarea"></label>
-    </div>
+      <p class="card-text">Project board name:</p>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Enter project name" id="repoName"></textarea>
+        <label for="floatingTextarea"></label>
+      </div>
 
-    <p class="card-text">Description:</p>
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-      <label for="floatingTextarea2"></label>
-    </div>
+      <p class="card-text">Description (optional):</p>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Enter description" id="repoDescription" style="height: 100px"></textarea>
+        <label for="floatingTextarea2"></label>
+      </div>
 
-    <button type="button" class="btn btn-primary">Create Repository</button>
+      <button type="submit" class="btn btn-primary" id="createBtn">Create Repository</button>
     </div>
-  </div>
-</div>
+  </form>
 
+  <!-- FOOTER -->
   <div id="footerContainer">
     <nav class="nav justify-content-center">
       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">@2021 GitHub, Inc.</a>
