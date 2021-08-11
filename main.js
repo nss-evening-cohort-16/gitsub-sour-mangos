@@ -1,4 +1,4 @@
-import {pinnedReposBuilder} from "./domMethods.js";
+import {pinnedReposBuilder, displayUserProfile} from "./domMethods.js";
 
 export const pinnedRepos = [];
 
@@ -28,6 +28,7 @@ const buttonEvents = () => {
 
 // Starts the app
 const init = () => {
+  displayUserProfile();
   buttonEvents("#formContainer");
 };
 
