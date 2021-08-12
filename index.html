@@ -26,34 +26,39 @@
     </nav>
   </div>
 
-  <!-- USER PROFILE -->
-  <div id="userProfile"></div>
+  <div id="overviewContainer">
+    <!-- USER PROFILE -->
+    <div id="userProfile"></div>
 
-  <!-- CARD CONTAINER -->
-  <div id="cardContainer"></div>
+    <div id="contentContainer">
+    <!-- CARD CONTAINER -->
+    <h2>Pinned</h2>
+    <div id="cardContainer"></div>
 
-  <!-- FORM -->
-  <form id="formContainer" >
-    <form class="card" style="width: 18rem;">
-      <div class="card-body">
-      <h5 class="card-title">Create a new project</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
+    <!-- FORM -->
+    <form id="formContainer" >
+      <form class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Create a new project</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
    
-      <p class="card-text">Project board name:</p>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Enter project name" id="repoName"></textarea>
-        <label for="floatingTextarea"></label>
-      </div>
+        <p class="card-text">Project board name:</p>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Enter project name" id="repoName"></textarea>
+          <label for="floatingTextarea"></label>
+        </div>
 
-      <p class="card-text">Description (optional):</p>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Enter description" id="repoDescription" style="height: 100px"></textarea>
-        <label for="floatingTextarea2"></label>
-      </div>
+        <p class="card-text">Description (optional):</p>
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Enter description" id="repoDescription" style="height: 100px"></textarea>
+          <label for="floatingTextarea2"></label>
+        </div>
 
-      <button type="submit" class="btn btn-primary" id="createBtn">Create Repository</button>
-    </div>
-  </form>
+        <button type="submit" class="btn btn-primary" id="createBtn">Create Repository</button>
+      </div>
+    </form>
+  </div>
+  </div>
 
   <!-- FOOTER -->
   <div id="footerContainer">

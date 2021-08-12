@@ -7,7 +7,7 @@ const renderToDom = (divId, textToPrint) => {
 
 // Builds the pinnedRepos array
 const pinnedReposBuilder = (array) => {
-  let domString = "<h2>Pinned</h2>"
+  let domString = ""
 
   pinnedRepos.forEach((repo, i) => {
     domString += `
@@ -18,7 +18,6 @@ const pinnedReposBuilder = (array) => {
           <p>${repo.programmingLanguage}</p>
           <p>${repo.favoriteCount}</p>
           <p>${repo.branchCount}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     `;
@@ -30,7 +29,7 @@ const pinnedReposBuilder = (array) => {
 // Displays User Profile
 const displayUserProfile = () => {
   const domString = `
-    <div class="card" style="width: 18rem;">
+    <div id="profile" class="card" style="width: 18rem;">
       <img class="card-img-top" src="https://avatars.githubusercontent.com/u/6998954?v=4" alt="user profile image">
       <div class="card-body">
         <h4 class="card-title">Monica Powell</h4>
