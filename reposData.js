@@ -35,7 +35,6 @@ const repoFunction = (array) => {
     <div class="card-body">
       <h5 class="card-title">${repo.name}</h5>
       <p class="card-text">${repo.description}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
     </div>`
   })
