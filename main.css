@@ -64,6 +64,8 @@ h2 {
   margin-bottom: 16px;
   margin-left: 8px;
   margin-right: 8px;
+  background-color: #0f1218;
+  border-color: #30363d;
 }
 
 #user-text {
@@ -76,6 +78,10 @@ h2 {
     flex: 0 40%;
     flex-grow: 0;
   }
+}
+
+.form-control {
+  background-color: #0a0d13;
 }
 
 #footerContainer {
