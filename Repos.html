@@ -12,7 +12,7 @@
 
   <!-- NAV BAR -->
   <div id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
@@ -27,7 +27,7 @@
   </div>
 
   <!-- USER PROFILE -->
-  <div class="card" style="width: 18rem;">
+  <div class="profile-card card" style="width: 18rem;">
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
       <h4 class="card-title">Name</h4>
@@ -59,11 +59,11 @@
     </ul>
   </div>
 
-<div id="repoContainer"></div>
+<div id="repoContainer" class="loopCard repoLoop"></div>
 
   <!-- REPO FORM -->
-<form id="formContainer" >
-  <div class="card" style="width: 18rem;">
+<form id="formContainer" class="formStyle repoForm">
+  <div class="card">
     <div class="card-body">
     <h5 class="card-title">Create a new repository</h5>
     <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
@@ -86,7 +86,7 @@
   </div>
 </form>
 
-  <div id="footerContainer">
+  <div id="footerContainer"class="footerStyle repoFooter">
     <nav class="nav justify-content-center">
       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">@2021 GitHub, Inc.</a>
       <a class="nav-link active" aria-current="page" href="#">Terms</a>
