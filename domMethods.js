@@ -3,6 +3,7 @@ import { pinnedRepos} from "./main.js";
 const renderToDom = (divId, textToPrint) => {
   const selectedDiv = document.querySelector(divId);
   selectedDiv.innerHTML = textToPrint;
+  
 }
 
 // Builds the pinnedRepos array
