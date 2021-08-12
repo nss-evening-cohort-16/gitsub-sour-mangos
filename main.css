@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: #0d1117;
     display: inline-block;
@@ -16,4 +17,11 @@ body{
     position: relative;
     top: 4px;
     left: 150px; 
+=======
+
+
+
+.fas {
+    margin: 4px;
+>>>>>>> c7d97fbd0784cf967b8c795279a766a6dc1729eb
 }
