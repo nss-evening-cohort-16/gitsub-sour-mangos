@@ -48,12 +48,14 @@ const displayUserProfile = () => {
           <p>star</p>
         </div>
       </div>
+      <div>
       <ul class="list-group list-group-flush">
         <li>New York, New York</li>
         <li>github@aboutmonica.com</li>
         <li>https://www.aboutmonica.com</li>
         <li>@indigitalcolor</li>
       </ul>
+      </div>
       <ul class="list-group list-group-flush">
         <h6>Highlights</h6>
         <li>Arctic Code Vault Contributor</li>
