@@ -1,16 +1,33 @@
 body {
   display: block;
   margin: 0 auto;
+  background-color: #0f1218;
+  color: #c8d1d9;
 }
 
 #navbar {
   display: block;
   width: 100%;
   margin-top: 24px;
+  background: transparent;
+}
+
+.nav-link {
+  color: #c9d1d9;
 }
 
 #profile {
   border: none;
+  background: transparent;
+}
+
+.btn {
+  background-color: #21262d;
+  color: #c9d1d9;
+}
+
+.list-group {
+  list-style-type: none;
 }
 
 #overviewContainer {
@@ -47,6 +64,10 @@ h2 {
   margin-bottom: 16px;
   margin-left: 8px;
   margin-right: 8px;
+}
+
+#user-text {
+  color: #6d757f;
 }
 
 /* max of 2 cards per row */

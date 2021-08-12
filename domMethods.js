@@ -33,13 +33,20 @@ const displayUserProfile = () => {
       <img class="card-img-top" src="https://avatars.githubusercontent.com/u/6998954?v=4" alt="user profile image">
       <div class="card-body">
         <h4 class="card-title">Monica Powell</h4>
-        <h5 class="card-text">M0nica</h5>
-        <p>Building tech to elevate people. Founder of React Ladies a community for React JS developers.</p>
-        <button type="button" class="btn btn-secondary" id="followBtn">Follow</button>
-        <button type="button" class="btn btn-secondary">Sponsor</button>
-        <button type="button" class="btn btn-secondary">...</button>
-        <p>followers</p>
-        <p>following</p>
+        <h5 class="card-text" id="user-text">M0nica</h5>
+        <div id="descriptionContainer>
+          <p>Building tech to elevate people. Founder of React Ladies a community for React JS developers.</p>
+        </div>
+        <div id="buttonContainer>
+          <button type="button" class="btn btn-secondary" id="followBtn">Follow</button>
+          <button type="button" class="btn btn-secondary">Sponsor</button>
+          <button type="button" class="btn btn-secondary">...</button>
+        </div>
+        <div id="followContainer>
+          <p>followers</p>
+          <p>following</p>
+          <p>star</p>
+        </div>
       </div>
       <ul class="list-group list-group-flush">
         <li>New York, New York</li>
