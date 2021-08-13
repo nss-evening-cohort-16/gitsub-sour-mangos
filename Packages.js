@@ -32,7 +32,7 @@ const cardBuilder = (array) => {
             <div class="card-body">
                 <h5 class="card-title" id="n">${taco.name}</h5>
                 <p class="card-text" id="d">${taco.description}</p>
-                <a href="#" type="button" class="btn btn-primary">Delete</a>
+                <button type="button" class="btn btn-light" id="${i}">Delete</button>
             </div>
         </div>`
     });
@@ -52,9 +52,9 @@ const handleFormSubmit = (event) => {
 
 const remove = (event) => {
     const targetID = event.target.id;
-    const targetType = event.target.targetType;
+    const targetType = event.target.type;
     if (targetType === "button") {
-        let deleted = packages.splice.target(targetID, 1);
+        let deleted = packages.splice(targetID, 1);
         cardBuilder(packages);
     }
 };
@@ -63,6 +63,9 @@ const buttonEvents = () => {
     document
     .querySelector('#formContainer')
     .addEventListener("submit", handleFormSubmit);
+    document
+    .querySelector("#cardsContainer")
+    .addEventListener("click", remove);
 };
 
 const loadPage = () => {
