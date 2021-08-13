@@ -1,8 +1,10 @@
-body {
-  display: block;
-  margin: 0 auto;
-  background-color: #0f1218;
-  color: #c8d1d9;
+body{
+    background-color: #0d1117;
+    display: inline-block;
+    color: #aaa;
+}
+.nav-link{
+    color: rgb(116, 115, 115);
 }
 
 #navbar {
@@ -12,89 +14,112 @@ body {
   background: transparent;
 }
 
-.nav-link {
-  color: #c9d1d9;
+.navbar{
+    background-color: #0d1117;
+    width:900px; 
+    position: relative;
+    left: 400px; 
+    color:rgb(116, 115, 115);
+}   
+.card{
+    background-color: transparent;
+    border: solid 1px rgb(116, 115, 115);
+    padding: 10px;
+}   
+.profile-card{
+    position: relative;
+    width: 900px;
+    height: 1200px;
+    top: 0px;
+    left: 100px; 
+    padding-left: 40px;
 }
 
-#profile {
-  border: none;
-  background: transparent;
+.form-control{
+    background-color: #090d13;
 }
 
-.btn {
-  background-color: #21262d;
-  color: #c9d1d9;
+.btn-primary{
+    background-color: #238636;
+    border: solid 1px #238636;
+}
+.loopCard{
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 400px;
+    top: 50px;
+    margin: 10px;
+}
+.formStyle{
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 400px;
+    top:750px;
+    margin: 10px;
+    border:1px solid #0d1117;
+}
+.footerStyle{
+    position: absolute;
+    width: 90%; 
+    top:1400px;
+    left: 50px;
+    margin: 10px;
+    padding: 15px;
+    border-top:solid 1px rgb(116, 115, 115);
+}
+.list-group{
+    height: 600px;
+}
+.btn-secondary{
+    background-color: #21272c;
+    border: 0; 
 }
 
-.list-group {
-  list-style-type: none;
+.card-header{
+    background-color:#161b21;
+    border: solid 1px rgb(116, 115, 115);
 }
-
-#overviewContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  max-width: 1280px;
-  margin: 0 auto;
+h5 {
+    font-size: 25px;
 }
-
-h2 {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 8px;
-  margin-left: 16px;
-  margin-right: -16px;
+.packagesContainer{
+    display:flex;
+    flex-wrap: wrap;
 }
-
-#cardContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  width: 100%;
-  margin-left: 8px;
-  margin-right: -8px;
+.repoForm {
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 400px;
+    top:1400px;
+    margin: 10px;
+    border:1px solid #0d1117;
 }
-
-.card {
-  display: flex;
-  width: 75%;
-  padding: 16px;
-  align-content: stretch;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  margin-left: 8px;
-  margin-right: 8px;
-  background-color: #0f1218;
-  border-color: #30363d;
-}
-
-#user-text {
-  color: #6d757f;
-}
-
-/* max of 2 cards per row */
-@media(min-width: 768px) {
-  .card {
-    flex: 0 40%;
-    flex-grow: 0;
-  }
-}
-
-.form-control {
-  background-color: #0a0d13;
-}
-
-#footerContainer {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 40px;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+.repoFooter{
+    position: absolute;
+    width: 90%; 
+    top:1900px;
+    left: 50px;
+    margin: 10px;
+    padding: 15px;
+    border-top:solid 1px rgb(116, 115, 115);
 }
 
 .fas {
-  margin: 4px;
+    margin: 4px;
+}
+.loopContainer{
+    display: flex;
+    flex-direction: column;
+}
+.projectForm{
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 400px;
+    top:950px;
+    margin: 10px;
+    border:1px solid #0d1117
 }
