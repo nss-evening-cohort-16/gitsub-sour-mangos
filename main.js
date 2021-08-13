@@ -14,7 +14,7 @@ const handlePinRepoBtn = (event) => {
       favoriteCount: "",
       branchCount: ""
     }
-  
+
     pinnedRepos.push(enteredRepo);
     pinnedReposBuilder(pinnedRepos);
     document.querySelector("#formContainer").reset();

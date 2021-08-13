@@ -36,11 +36,9 @@ const displayUserProfile = () => {
         <h4 class="card-title">Monica Powell</h4>
         <h5 class="card-text" id="user-text">M0nica</h5>
         <p>Building tech to elevate people. Founder of React Ladies a community for React JS developers.</p>
-        <div id="btnContainer>
-          <button type="button" class="btn btn-secondary" id="followBtn">Follow</button>
-          <button type="button" class="btn btn-secondary">Sponsor</button>
-          <button type="button" class="btn btn-secondary">...</button>
-        </div>
+        <button type="button" class="btn btn-secondary" id="followBtn">Follow</button>
+        <button type="button" class="btn btn-secondary">Sponsor</button>
+        <button type="button" class="btn btn-secondary">...</button>
         <p>followers</p>
         <p>following</p>
         <p>star</p>
