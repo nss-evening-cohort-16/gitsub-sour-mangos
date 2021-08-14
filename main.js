@@ -34,7 +34,7 @@ const displayUserProfile = () => {
       <li><i class="far fa-star"></i> PRO</li>
     </ul>
     <ul class="list-group list-group-flush">
-      <h6>Oragnizations</h6>
+      <h6>Organizations</h6>
     </ul>
     <ul class="list-group list-group-flush">
       <h6>Sponsors</h6>
