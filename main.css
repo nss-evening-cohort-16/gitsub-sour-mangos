@@ -179,12 +179,11 @@ h5 {
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
     padding: 10px;
-    position: relative;
 }   
 
 .cbForm {
     margin-left: -400px;
-    margin-top: 600px;
+    margin-top: 500px;
 }
 
 #pinnedRepo {
@@ -208,9 +207,9 @@ h5 {
     justify-content: center;
     width: 1600px !important;
     height: 850px;
+    margin-top: -50px;
 }
 
 .overviewFooter {
-    position: absolute;
     top: 1800px;
 }
