@@ -137,13 +137,10 @@ h5 {
 
 #cbForm {
     margin-left: -410px;
+    width: 900px;
 }
 
 #pinnedRepo {
     margin-left: -410px;
     margin-bottom: 16px;
-}
-
-#repoCard {
-
 }
