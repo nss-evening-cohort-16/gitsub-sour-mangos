@@ -43,7 +43,19 @@ const projectArray = [
       },
     
   ];
-  const visibleArray = []
+  const searchProjects = (event) =>{
+    const searchString = event.target.value.toLowerCase();
+    const filteredProjects = projectArray.filter((project) =>
+   {
+    console.log(event)  
+    return (
+        project.name.toLocaleLowerCase().includes(searchString) 
+        || 
+        project.description.toLocaleLowerCase().includes (searchString)
+        );
+    });
+    createProjectCard(filteredProjects);
+  };
   
   const renderToDom = (divId, textToPrint) => {
     const selectedDiv = document.querySelector(divId);
@@ -138,12 +150,17 @@ const formEvents = () => {
      const formElement = document.querySelector("#projectFormContainer");
      formElement.addEventListener("submit", submitButton);
     };
-
+    
+const searchEvents = () => {
+      const searchBar = document.querySelector("#searchBar");
+      searchBar.addEventListener('keyup',searchProjects);
+     }
 
     const init= () => {
         displayUserProfile();
         createProjectCard(projectArray);
         formEvents(); 
-    }
+        searchEvents();
+      }
     init();
-    console.log(projectArray)
+  
