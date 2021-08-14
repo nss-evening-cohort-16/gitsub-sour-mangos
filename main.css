@@ -25,6 +25,27 @@ body{
     color:rgb(116, 115, 115);
     margin-bottom: 30px;
 }   
+.search-styles{
+    background-color: transparent;
+    position: absolute;
+    width: 900px;
+    height: 50px;
+    left: 10px;
+    top: 60px;
+    margin: 10px;
+}
+.searchInput{
+    width: 900px;
+}
+.projectLoopContainer{
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 400px;
+    top: 100px;
+    margin: 30px 20px;
+}
+
 .nav-link:hover {
     color: white;
 }
@@ -144,6 +165,7 @@ h5 {
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
     padding: 10px;
+<<<<<<< HEAD
 }   
 
 .cbForm {
@@ -165,3 +187,6 @@ h5 {
     display: flex;
     flex-wrap: wrap;
 }
+=======
+} 
+>>>>>>> main
