@@ -119,9 +119,9 @@ const displayUserProfile = () => {
         Sort
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Name</a>
-        <a class="dropdown-item" href="#">Description</a>
-        <a class="dropdown-item" href="#">Status</a>
+        <a id="sortName" class="dropdown-item" href="#">Name</a>
+        <a id="sortName" class="dropdown-item" href="#">Description</a>
+        <a id="sortName" class="dropdown-item" href="#">Status</a>
       </div>
     </div>
   </div>`
@@ -142,7 +142,9 @@ const displayUserProfile = () => {
 renderToDom("#loopContainer", domString)
   };
   
-  
+  const sortBtn= () => {
+
+  }
   
   const submitButton= (event) => {
    event.preventDefault();
