@@ -35,6 +35,11 @@ body{
 }
 
 
+
+ul {
+    list-style-type: none;
+}
+
 .card{
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
@@ -62,7 +67,7 @@ body{
     width: 900px;
     height: 90px;
     left: 400px;
-    top: 140px;
+    top: 120px;
     margin: 10px;
 }
 .formStyle{
@@ -70,7 +75,7 @@ body{
     width: 900px;
     height: 90px;
     left: 400px;
-    top:950px;
+    top:750px;
     margin: 10px;
     border:1px solid #0d1117;
 }
@@ -142,4 +147,4 @@ h5 {
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
     padding: 10px;
-}   
+} 
