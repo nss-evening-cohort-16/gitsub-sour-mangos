@@ -136,18 +136,32 @@ h5 {
     border:1px solid #0d1117
 }
 
+#pinned {
+    font-size: 24px;
+}
+
 #cbContainer{
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
     padding: 10px;
 }   
 
-#cbForm {
-    margin-left: -410px;
-    width: 900px;
+.cbForm {
+    margin-left: -400px;
 }
 
 #pinnedRepo {
-    margin-left: -410px;
+    border-radius: 10px;
     margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 120px;
+    width: 300px;
+}
+
+.repoCards {
+    margin-top: -5px;
+    margin-left: -400px;
+    display: flex;
+    flex-wrap: wrap;
 }
