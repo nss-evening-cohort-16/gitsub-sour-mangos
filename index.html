@@ -27,36 +27,26 @@
     </nav>
   </div>
 
-  <!-- USER PROFILE -->
-  <div id="userProfile"></div>
+    <!-- USER PROFILE -->
+    <div id="userProfile"></div>
 
-  <!-- CARD CONTAINER -->
-  <h2>Pinned</h2>
-  <div id="cardContainer" class="loopCard"></div>
+  <div class="loopContainer loopCard">
+    <!-- CARD CONTAINER -->
+    <h2 id="pinned">Pinned</h2>
+    <form id="cardContainer" class="loopCard"></form>
 
-  <!-- FORM -->
-  <form id="formContainer" class="formStyle">
-    <form class="card">
-      <div class="card-body">
-      <h5 class="card-title">Create a new project</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
-   
-        <p class="card-text">Project board name:</p>
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Enter project name" id="repoName"></textarea>
-          <label for="floatingTextarea"></label>
+    <!-- FORM -->
+    <div id="cardsContainer" class="loopCard"></div>
+
+    <form id="formContainer"class="formStyle" >
+      <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">Pin a new repo</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one place, so projects stay transparent and on schedule.</h6>
         </div>
-
-        <p class="card-text">Description (optional):</p>
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Enter description" id="repoDescription" style="height: 100px"></textarea>
-          <label for="floatingTextarea2"></label>
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="createBtn">Create Repository</button>
+        <div id="cbContainer"></div>
       </div>
     </form>
-  </div>
   </div>
 
   <!-- FOOTER -->
