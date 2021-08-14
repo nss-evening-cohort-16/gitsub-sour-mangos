@@ -120,8 +120,8 @@ const displayUserProfile = () => {
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a id="sortName" class="dropdown-item" href="#">Name</a>
-        <a id="sortName" class="dropdown-item" href="#">Description</a>
-        <a id="sortName" class="dropdown-item" href="#">Status</a>
+        <a id="sortDescripton" class="dropdown-item" href="#">Description</a>
+        <a id="sortStatus" class="dropdown-item" href="#">Status</a>
       </div>
     </div>
   </div>`
@@ -172,7 +172,11 @@ const searchEvents = () => {
       searchBar.addEventListener('keyup',searchProjects);
      }
 
-    const init= () => {
+const sortEvents = () => {
+    const name = 
+}    
+    
+     const init= () => {
         displayUserProfile();
         createProjectCard(projectArray);
         formEvents(); 
