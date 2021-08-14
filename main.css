@@ -21,10 +21,19 @@ body{
     left: 400px; 
     color:rgb(116, 115, 115);
 }   
-
-ul {
-    list-style-type: none;
+.search-styles{
+    background-color: transparent;
+    position: absolute;
+    width: 900px;
+    height: 50px;
+    left: 0px;
+    top: 60px;
+    margin: 10px;
 }
+.searchInput{
+    width: 900px;
+}
+
 
 .card{
     background-color: transparent;
@@ -53,7 +62,7 @@ ul {
     width: 900px;
     height: 90px;
     left: 400px;
-    top: 50px;
+    top: 140px;
     margin: 10px;
 }
 .formStyle{
@@ -61,7 +70,7 @@ ul {
     width: 900px;
     height: 90px;
     left: 400px;
-    top:750px;
+    top:950px;
     margin: 10px;
     border:1px solid #0d1117;
 }
