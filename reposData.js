@@ -4,7 +4,7 @@ import { repos } from "./dataArray.js";
 //   {
 //     name: "Pies",
 //     view: "Public",
-//     description: "Added"
+//     description: "Added",
 //   },
 //   {
 //     name: "Sorting Hat",
@@ -72,10 +72,11 @@ const repoFunction = (array) => {
   array.forEach((repo) => {
     domString += 
     `<div class="card">
-    <h5 class="card-header">Repository</h5>
+    <h5 class="card-header">Repository-<button onclick="starFunction()" type="button" class="btn btn-primary">☆</button></h5>
     <div class="card-body">
       <h5 class="card-title">${repo.name}</h5>
       <p class="card-text">${repo.description}</p>
+      <p class="card-text">${repo.view}</p>
     </div>
     </div>`
   })
@@ -106,6 +107,9 @@ const repoCallback = (event) => {
     repoBtns.addEventListener("submit", repoCallback);
   };
 
+  const starFunction = () => {
+  }
+
   const init = () => {
     displayUserProfile();
     repoFunction(repos);
@@ -113,3 +117,5 @@ const repoCallback = (event) => {
   };
 
   init();
+
+  
