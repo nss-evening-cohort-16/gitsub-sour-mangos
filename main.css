@@ -55,6 +55,12 @@ ul {
     border: solid 1px #238636;
 }
 
+.gutsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .loopCard{
     position: absolute;
     width: 900px;
@@ -72,6 +78,14 @@ ul {
     margin: 10px;
     border:1px solid #0d1117;
 }
+.searchBar {
+    position: absolute;
+    width: 900px;
+    height: 90px;
+    left: 410px;
+    top: 1200px;
+}
+
 .footerStyle{
     position: absolute;
     width: 90%; 

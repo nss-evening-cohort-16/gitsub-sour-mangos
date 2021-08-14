@@ -107,6 +107,10 @@ const buttonEvents = () => {
     .addEventListener("click", remove);
 };
 
+const search = () => {
+
+};
+
 const loadPage = () => {
     displayUserProfile();
     cardBuilder(packages);
