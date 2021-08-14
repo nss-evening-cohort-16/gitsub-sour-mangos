@@ -37,6 +37,7 @@ body{
 .searchInput{
     width: 900px;
 }
+
 .projectLoopContainer{
     position: absolute;
     width: 900px;
@@ -81,18 +82,27 @@ ul {
     width: 900px;
     height: 90px;
     left: 400px;
-    top: 50px;
+    top: 95px;
     margin: 30px 20px;
 }
 .formStyle{
     position: absolute;
     width: 900px;
     height: 90px;
-    left: 400px;
-    top:750px;
+    left: 410px;
+    top: 825px;
     margin: 10px;
     border:1px solid #0d1117;
 }
+.searchBar {
+    position: absolute;
+    width: 90px;
+    height: 50px;
+    left: 420px;
+    top: 80px;
+    width: 865px;
+}
+
 .footerStyle{
     position: absolute;
     width: 90%; 
