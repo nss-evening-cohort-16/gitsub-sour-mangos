@@ -21,6 +21,11 @@ body{
     left: 400px; 
     color:rgb(116, 115, 115);
 }   
+
+ul {
+    list-style-type: none;
+}
+
 .card{
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);

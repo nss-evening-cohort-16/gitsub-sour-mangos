@@ -1,30 +1,32 @@
-const repos = [
-  {
-    name: "Pies",
-    view: "Public",
-    description: "Added"
-  },
-  {
-    name: "Sorting Hat",
-    view: "Public",
-    description:"Added"
-  },
-  {
-    name: "Space Travel",
-    view: "Public",
-    description:"Added"
-  },
-  {
-    name: "Pet Adoption",
-    view: "Public",
-    description:"Added"
-  },
-  {
-    name: "Good Vibes Only",
-    view: "Public",
-    description:"Added"
-  }
-];
+import { repos } from "./dataArray.js";
+
+// const repos = [
+//   {
+//     name: "Pies",
+//     view: "Public",
+//     description: "Added"
+//   },
+//   {
+//     name: "Sorting Hat",
+//     view: "Public",
+//     description:"Added"
+//   },
+//   {
+//     name: "Space Travel",
+//     view: "Public",
+//     description:"Added"
+//   },
+//   {
+//     name: "Pet Adoption",
+//     view: "Public",
+//     description:"Added"
+//   },
+//   {
+//     name: "Good Vibes Only",
+//     view: "Public",
+//     description:"Added"
+//   }
+// ];
 
 // Displays User Profile
 const displayUserProfile = () => {
