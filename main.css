@@ -7,6 +7,12 @@ body{
     color: rgb(116, 115, 115);
 }
 
+#navbar {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  background: transparent;
+}
 
 .navbar{
     background-color: #0d1117;
@@ -15,6 +21,11 @@ body{
     left: 400px; 
     color:rgb(116, 115, 115);
 }   
+
+ul {
+    list-style-type: none;
+}
+
 .card{
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
@@ -117,3 +128,9 @@ h5 {
     margin: 10px;
     border:1px solid #0d1117
 }
+
+#cbContainer{
+    background-color: transparent;
+    border: solid 1px rgb(116, 115, 115);
+    padding: 10px;
+}   

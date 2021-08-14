@@ -27,65 +27,27 @@
     </nav>
   </div>
 
-  <!-- USER PROFILE -->
-  
-  <div class="profile-card card" style="width: 18rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h4 class="card-title">firstName lastName</h4>
-      <h5 class="card-text">username</h5>
-      <p>Building tech to elevate people. Founder of React Ladies a community for React JS developers.</p>
-      <button type="button" class="btn btn-secondary">Follow</button>
-      <button type="button" class="btn btn-secondary">Sponsor</button>
-      <button type="button" class="btn btn-secondary">...</button>
-      <p>followers</p>
-      <p>following</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li>New York, New York</li>
-      <li>github@aboutmonica.com</li>
-      <li>https://www.aboutmonica.com</li>
-      <li>@indigitalcolor</li>
-    </ul>
-    <ul class="list-group list-group-flush">
-      <h6>Highlights</h6>
-      <li>Arctic Code Vault Contributor</li>
-      <li>GitHub Star</li>
-      <li>PRO</li>
-    </ul>
-    <ul class="list-group list-group-flush">
-      <h6>Oragnizations</h6>
-    </ul>
-    <ul class="list-group list-group-flush">
-      <h6>Sponsors</h6>
-    </ul>
+    <!-- USER PROFILE -->
+    <div id="userProfile"></div>
+
+  <div class="loopContainer loopCard">
+    <!-- CARD CONTAINER -->
+    <h2 id="pinned">Pinned</h2>
+    <form id="cardContainer" class="loopCard"></form>
+
+    <!-- FORM -->
+    <div id="cardsContainer" class="loopCard"></div>
+
+    <form id="formContainer"class="formStyle" >
+      <div class="card">
+        <div class="card-body">
+        <h5 class="card-title">Pin a new repo</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Coordinate, track and update your work in one place, so projects stay transparent and on schedule.</h6>
+        </div>
+        <div id="cbContainer"></div>
+      </div>
+    </form>
   </div>
-
-  <!-- CARD CONTAINER -->
-  <div id="cardContainer" class="loopCard"></div>
-
-  <!-- FORM -->
-  <form id="formContainer" class="formStyle">
-    <form class="card">
-      <div class="card-body">
-      <h5 class="card-title">Create a new project</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Coordinate, track, and update your work in one place, so projects stay transparent and on schedule.</h6>
-   
-      <p class="card-text">Project board name:</p>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Enter project name" id="repoName"></textarea>
-        <label for="floatingTextarea"></label>
-      </div>
-
-      <p class="card-text">Description (optional):</p>
-      <div class="form-floating">
-        <textarea class="form-control" placeholder="Enter description" id="repoDescription" style="height: 100px"></textarea>
-        <label for="floatingTextarea2"></label>
-      </div>
-
-      <button type="submit" class="btn btn-primary" id="createBtn">Create Repository</button>
-    </div>
-  </form>
 
   <!-- FOOTER -->
   <div id="footerContainer"class="footerStyle">
