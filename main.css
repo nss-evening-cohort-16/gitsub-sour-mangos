@@ -7,6 +7,12 @@ body{
     color: rgb(116, 115, 115);
 }
 
+#navbar {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  background: transparent;
+}
 
 .navbar{
     background-color: #0d1117;
