@@ -108,7 +108,6 @@ const repoCallback = (event) => {
   };
 
   const starFunction = () => {
-
   }
 
   const init = () => {
