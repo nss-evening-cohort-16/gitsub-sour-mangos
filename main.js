@@ -70,7 +70,6 @@ const handlePinRepoBtn = (event) => {
   event.preventDefault();
 
   if (event.target.id === "createBtn") {
-    const checkedRepos = [];
     const pinnedRepos = [];
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
@@ -92,7 +91,7 @@ const pinnedReposBuilder = (array) => {
 
   array.forEach((repo, i) => {
     domString += `
-      <div class="card" style="width: 18rem;">
+      <div class="card" id="pinnedRepo" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${repo.name}</h5>
           <p class="card-text">${repo.description}</p>
