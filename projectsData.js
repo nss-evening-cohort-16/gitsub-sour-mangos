@@ -108,12 +108,26 @@ const displayUserProfile = () => {
   const findNumofClosedProjects = (array, status) => {
     return array.filter((obj) => obj.status === status).length;
   }; 
-   
+ 
 
   const createProjectCard = (array) => {
-    let domString =` <div class="card-header">
+    let icon= `
+    <div id="sortIcon" class="sortBtnContainer">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+      data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Name</a>
+        <a class="dropdown-item" href="#">Description</a>
+        <a class="dropdown-item" href="#">Status</a>
+      </div>
+    </div>
+  </div>`
+    let domString = icon + ` <div id="cardHeader" class="card-header"> 
     ${findNumofOpenProjects(projectArray,"Open")} Open  ✔  ${findNumofClosedProjects(projectArray, "Closed")} Closed;
-  </div>`;
+  </div> `;
     array.forEach((project) => {
     domString += `
     <div class="card" 
