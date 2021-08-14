@@ -98,17 +98,19 @@ const remove = (event) => {
     }
 };
 
-const buttonEvents = () => {
-    document
-    .querySelector('#formContainer')
-    .addEventListener("submit", handleFormSubmit);
-    document
-    .querySelector("#cardsContainer")
-    .addEventListener("click", remove);
+const search = (e) => {
+    const searchString = e.target.value;
+    const filteredPackages = packages.filter((box) => {
+        return (box.name.includes(searchString));
+    });
+    cardBuilder(filteredPackages);
+    console.log(searchString)
 };
 
-const search = () => {
-
+const buttonEvents = () => {
+    document.querySelector('#formContainer').addEventListener("submit", handleFormSubmit);
+    document.querySelector("#cardsContainer").addEventListener("click", remove);
+    document.querySelector('#searchFeild').addEventListener('keyup', search);
 };
 
 const loadPage = () => {
