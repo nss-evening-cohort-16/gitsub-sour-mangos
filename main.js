@@ -62,7 +62,7 @@ const displayCheckBoxForm = (array) => {
 
   domString += `<br><br><input id="createBtn" type="submit" value="Pin Repos">`;
 
-  renderToDom("#formContainer", domString);
+  renderToDom("#cbContainer", domString);
 };
 
 // Pushes desired repos into the pinnedRepos array
