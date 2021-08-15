@@ -3,42 +3,42 @@ const projectArray = [
       id: 1, 
       visibility: "private",
       description: "No description" , 
-      update: "🕔Updated 44 seconds ago",
+      update: "5 days ago",
       status: "Open"
     },
     { name: "my-goals",
       id: 2, 
       visibility: "",
       description: "No description",
-      update: "🕔Updated 7 hours ago",
+      update: "7 days ago",
       status: "Open"
       },
     { name: "Sample My Goals",
       id: 3,
       visibility: "",
       description: "Goals for NSS Bootcamp",
-      update: "🕔Updated 1 minute ago",
+      update: "1 day ago",
       status: "Open"
       }, 
     { name: "sorting-hat", 
       id: 4, 
       visibility: "",
       description: "Sort yourself into a hogwarts house!",
-      update: "🕔Updated 3 days ago",
-      status: "Open"
+      update: "3 days ago",
+      status: "Closed"
       },
     { name: "product-cards",
       id: 5,
-      visibility: "",
+      visibility: "private",
       description: "Product cards for an online store",
-      update:"🕔Updated 7 days ago",
+      update:"7 days ago",
       status: "Open"
       },
     { name: "calculator-app",
       id: 6,
       visibility: "", 
       description: "Basic calculator app for mobile device",
-      update: "🕔 Updated 17 minutes ago",
+      update:"17 days ago",
       status:   "Closed"
       },
     
@@ -107,8 +107,8 @@ const displayUserProfile = () => {
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a id="sortName" class="dropdown-item" href="#">Name</a>
-        <a id="sortDescripton" class="dropdown-item" href="#">Description</a>
-        <a id="sortStatus" class="dropdown-item" href="#">Status</a>
+        <a id="sortUpdate" class="dropdown-item" href="#">Recently Updated</a>
+        <a id="sortReverseUp" class="dropdown-item" href="#">Least Recently Updated</a>
       </div>
     </div>
   </div>`
@@ -120,7 +120,7 @@ const displayUserProfile = () => {
     <div class="card" 
     <div class="card-body">
      <pre> ${project.name} ${project.visibility}           ${project.description}</pre> <br>
-      ${project.update}
+     🕔 Updated ${project.update}
     </div>
   </div>`
  
@@ -129,6 +129,10 @@ const displayUserProfile = () => {
 renderToDom("#loopContainer", domString)
 const dropName = document.querySelector("#sortName");
 dropName.addEventListener("click", sortBtn);
+const dropUpdate = document.querySelector("#sortUpdate");
+dropUpdate.addEventListener("click", sortBtn);
+const dropVisibility = document.querySelector("#sortReverseUp");
+dropVisibility.addEventListener("click", sortBtn);
 };
   
 const searchProjects = (event) =>{
@@ -147,7 +151,7 @@ const searchProjects = (event) =>{
   const orderByName = (array) => {        
     return array.sort(function (a,b){
       const projOne= a.name.toUpperCase(); 
-      const projTwo =b.name.toUpperCase();
+      const projTwo= b.name.toUpperCase();
       if (projOne < projTwo){
         return -1;
       };
@@ -156,17 +160,44 @@ const searchProjects = (event) =>{
       }
         return 0;
       });
-   
-    };
-   
-  const sortBtn= (event) => {
+   };
+ const orderByUpdate = (array) => {
+   return array.sort(function (a,b) {
+     const projOne = parseInt(a.update);
+     const projTwo = parseInt(b.update);
+     return projOne - projTwo; 
+    });
+  };
+  
+ 
+ 
+ 
+  const orderByVisibility = (array) => {
+   return array.sort(function (a,b){
+     const projOne = a.visibility.toUpperCase();
+     const projTwo = b.visibility.toUpperCase();
+     if(projOne === "private" && projTwo === "")
+     return -1;
+     if (projTwo === "private" && projOne === "")
+     return 1;
+    return 0;
+   })
+ }
+ 
+   const sortBtn= (event) => {
       const targetId = event.target.id;
       const targetType = event.target.type;
       if (targetId === "sortName") {
      orderByName(projectArray);
      createProjectCard(projectArray);
-      console.log(event)
-      
+      }
+      if (targetId === "sortUpdate"){
+        orderByUpdate(projectArray);
+        createProjectCard(projectArray);
+      }
+      if (targetId === "sortReverseUp"){
+        orderByUpdate(projectArray).reverse();
+        createProjectCard(projectArray);
       }
     }
   
