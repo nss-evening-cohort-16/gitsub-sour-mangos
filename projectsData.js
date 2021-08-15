@@ -168,21 +168,6 @@ const searchProjects = (event) =>{
      return projOne - projTwo; 
     });
   };
-  
- 
- 
- 
-  const orderByVisibility = (array) => {
-   return array.sort(function (a,b){
-     const projOne = a.visibility.toUpperCase();
-     const projTwo = b.visibility.toUpperCase();
-     if(projOne === "private" && projTwo === "")
-     return -1;
-     if (projTwo === "private" && projOne === "")
-     return 1;
-    return 0;
-   })
- }
  
    const sortBtn= (event) => {
       const targetId = event.target.id;
@@ -207,7 +192,7 @@ const searchProjects = (event) =>{
           name: document.querySelector("#nameInput").value,
           visibility:"",
           description: document.querySelector("#descriptionInput").value,
-          update: "",
+          update: "1 second ago",
           status: "Open"
         };
         
