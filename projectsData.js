@@ -43,19 +43,6 @@ const projectArray = [
       },
     
   ];
-  const searchProjects = (event) =>{
-    const searchString = event.target.value.toLowerCase();
-    const filteredProjects = projectArray.filter((project) =>
-   {
-    console.log(event)  
-    return (
-        project.name.toLocaleLowerCase().includes(searchString) 
-        || 
-        project.description.toLocaleLowerCase().includes (searchString)
-        );
-    });
-    createProjectCard(filteredProjects);
-  };
   
   const renderToDom = (divId, textToPrint) => {
     const selectedDiv = document.querySelector(divId);
@@ -138,15 +125,52 @@ const displayUserProfile = () => {
   </div>`
  
 });
-
+  
 renderToDom("#loopContainer", domString)
+const dropName = document.querySelector("#sortName");
+dropName.addEventListener("click", sortBtn);
+};
+  
+const searchProjects = (event) =>{
+    const searchString = event.target.value.toLowerCase();
+    const filteredProjects = projectArray.filter((project) =>
+   { 
+    return (
+        project.name.toLowerCase().includes(searchString) 
+        || 
+        project.description.toLowerCase().includes (searchString)
+        );
+    });
+    createProjectCard(filteredProjects);
   };
   
-  const sortBtn= () => {
-
-  }
+  const orderByName = (array) => {        
+    return array.sort(function (a,b){
+      const projOne= a.name.toUpperCase(); 
+      const projTwo =b.name.toUpperCase();
+      if (projOne < projTwo){
+        return -1;
+      };
+      if (projTwo > projOne){
+        return 1;
+      }
+        return 0;
+      });
+   
+    };
+   
+  const sortBtn= (event) => {
+      const targetId = event.target.id;
+      const targetType = event.target.type;
+      if (targetId === "sortName") {
+     orderByName(projectArray);
+     createProjectCard(projectArray);
+      console.log(event)
+      
+      }
+    }
   
-  const submitButton= (event) => {
+    const submitButton= (event) => {
    event.preventDefault();
       const project = {
           name: document.querySelector("#nameInput").value,
@@ -172,15 +196,15 @@ const searchEvents = () => {
       searchBar.addEventListener('keyup',searchProjects);
      }
 
-const sortEvents = () => {
-    const name = 
-}    
-    
-     const init= () => {
-        displayUserProfile();
-        createProjectCard(projectArray);
-        formEvents(); 
-        searchEvents();
-      }
-    init();
+
+
+const init= () => {
+  displayUserProfile();
+  createProjectCard(projectArray);
+  formEvents(); 
+  searchEvents();
   
+ }
+ 
+ init();
+ 
