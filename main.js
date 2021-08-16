@@ -45,6 +45,25 @@ const displayUserProfile = () => {
   renderToDom("#userProfile", domString);
 };
 
+// Displays About Area
+const displayAboutArea = () => {
+  const domString = `
+    <h1>Hi, I'm Monica 👋🏾 👩🏾‍💻</h1>
+    <img src="https://raw.githubusercontent.com/M0nica/M0nica/master/gh-header-image-cropped.png" alt="banner that says Monica Powell - software engineer, content creator and community organizer alongside a cartoon illustration of Monica">
+    I'm a software engineer who is passionate about making open-source more accessible, creating technology to elevate people, and building community. Some technologies I enjoy working with include ReactJS, Jamstack (JavaScript, APIs + Markup) and GraphQL. I recently was selected to be an inaugural <a href="https://stars.github.com/">GitHub Star 🌟</a> based on my involvement in the tech community.  My interest in the React ecosystem led me to launch <a href="https://www.meetup.com/React-Ladies/">React Ladies</a>, a community for women and non-binary ReactJS developers.
+    
+    
+    <h2>Find me around the web 🌎:</h2> <a href="https://github.com/sponsors/M0nica"><img align="left" width="150" height="150" src="https://github.com/M0nica/M0nica/blob/main/octomonica/m0nica-octocat-rotating.gif?raw=true"></a>
+    <ul>
+    <li>Learning in public on <a href="https://www.twitch.tv/blacktechdiva">Twitch</a> or <a href="https://www.monica.dev">monica.dev</a> 📹 ✍🏾</li>
+    <li>Tinkering with interactions on <a href="https://codepen.io/m0nica"> Codepen</a> 🏓</li>
+    <li>Sharing updates on <a href="https://www.linkedin.com/in/monicampowell/">LinkedIn</a> 💼</li>
+    </ul>
+  `;
+
+  renderToDom("#aboutArea", domString);
+}
+
 // Creates checkboxes to select the repos to pin
 const displayCheckBoxForm = (array) => {
   let domString = "";
@@ -70,7 +89,6 @@ const handlePinRepoBtn = (event) => {
   event.preventDefault();
 
   if (event.target.id === "createBtn") {
-    const checkedRepos = [];
     const pinnedRepos = [];
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
 
@@ -92,7 +110,7 @@ const pinnedReposBuilder = (array) => {
 
   array.forEach((repo, i) => {
     domString += `
-      <div class="card" style="width: 18rem;">
+      <div class="card" id="pinnedRepo" style="width: 27rem;">
         <div class="card-body">
           <h5 class="card-title">${repo.name}</h5>
           <p class="card-text">${repo.description}</p>
@@ -112,6 +130,7 @@ const buttonEvents = () => {
 // Starts the app
 const init = () => {
   displayUserProfile();
+  displayAboutArea();
   displayCheckBoxForm(repos);
   buttonEvents();
 };

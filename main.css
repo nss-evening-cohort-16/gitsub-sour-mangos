@@ -3,6 +3,7 @@ body{
     display: inline-block;
     color: #aaa;
 }
+
 .nav-link{
     color: rgb(116, 115, 115);
 }
@@ -167,6 +168,13 @@ h5 {
     border:1px solid #0d1117
 }
 
+/* BELOW IS FOR OVERVIEW PAGE */
+#pinned {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #cbContainer{
     background-color: transparent;
     border: solid 1px rgb(116, 115, 115);
@@ -177,4 +185,38 @@ h5 {
     background-color: transparent;
     top:3px;
     left:810px;
+}
+   
+
+.cbForm {
+    margin-left: -400px;
+    margin-top: 500px;
+}
+
+#pinnedRepo {
+    border-radius: 10px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 120px;
+}
+
+.repoCards {
+    margin-top: -5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+}
+
+#aboutArea {
+    border: solid 1px rgb(116, 115, 115);
+    border-radius: 10px;
+    justify-content: center;
+    width: 1600px !important;
+    height: 850px;
+    margin-top: -50px;
+}
+
+.overviewFooter {
+    top: 1800px;
 }
