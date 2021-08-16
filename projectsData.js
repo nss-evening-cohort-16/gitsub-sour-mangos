@@ -126,13 +126,13 @@ const displayUserProfile = () => {
  
 });
   
-renderToDom("#loopContainer", domString)
-const dropName = document.querySelector("#sortName");
-dropName.addEventListener("click", sortBtn);
-const dropUpdate = document.querySelector("#sortUpdate");
-dropUpdate.addEventListener("click", sortBtn);
-const dropVisibility = document.querySelector("#sortReverseUp");
-dropVisibility.addEventListener("click", sortBtn);
+        renderToDom("#loopContainer", domString)
+        const dropName = document.querySelector("#sortName");
+        dropName.addEventListener("click", sortBtn);
+        const dropUpdate = document.querySelector("#sortUpdate");
+        dropUpdate.addEventListener("click", sortBtn);
+        const dropVisibility = document.querySelector("#sortReverseUp");
+        dropVisibility.addEventListener("click", sortBtn);
 };
   
 const searchProjects = (event) =>{
@@ -142,7 +142,7 @@ const searchProjects = (event) =>{
     return (
         project.name.toLowerCase().includes(searchString) 
         || 
-        project.description.toLowerCase().includes (searchString)
+        project.description.toLowerCase().includes(searchString)
         );
     });
     createProjectCard(filteredProjects);
@@ -161,6 +161,7 @@ const searchProjects = (event) =>{
         return 0;
       });
    };
+ 
  const orderByUpdate = (array) => {
    return array.sort(function (a,b) {
      const projOne = parseInt(a.update);
@@ -175,16 +176,16 @@ const searchProjects = (event) =>{
       if (targetId === "sortName") {
      orderByName(projectArray);
      createProjectCard(projectArray);
-      }
+      };
       if (targetId === "sortUpdate"){
         orderByUpdate(projectArray);
         createProjectCard(projectArray);
-      }
+      };
       if (targetId === "sortReverseUp"){
         orderByUpdate(projectArray).reverse();
         createProjectCard(projectArray);
-      }
-    }
+      };
+    };
   
     const submitButton= (event) => {
    event.preventDefault();
@@ -210,7 +211,7 @@ const formEvents = () => {
 const searchEvents = () => {
       const searchBar = document.querySelector("#searchBar");
       searchBar.addEventListener('keyup',searchProjects);
-     }
+     };
 
 
 
@@ -220,7 +221,7 @@ const init= () => {
   formEvents(); 
   searchEvents();
   
- }
+ };
  
  init();
  
