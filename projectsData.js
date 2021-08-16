@@ -113,7 +113,7 @@ const displayUserProfile = () => {
     </div>
   </div>`
     let domString = icon + ` <div id="cardHeader" class="card-header"> 
-    ${findNumofOpenProjects(projectArray,"Open")} Open  ✔  ${findNumofClosedProjects(projectArray, "Closed")} Closed;
+    ${findNumofOpenProjects(projectArray,"Open")} Open  ✔  ${findNumofClosedProjects(projectArray, "Closed")} Closed
   </div> `;
     array.forEach((project) => {
     domString += `
