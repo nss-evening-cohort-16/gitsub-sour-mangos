@@ -24,8 +24,8 @@ const displayUserProfile = () => {
     <ul class="list-group list-group-flush">
       <li><i class="fas fa-map-marker-alt"></i> New York, New York</li>
       <li><i class="fas fa-envelope"></i> github@aboutmonica.com</li>
-      <li><i class="fas fa-link"></i> https://www.aboutmonica.com</li>
-      <li><i class="fab fa-twitter"></i> @indigitalcolor</li>
+      <li><i class="fas fa-link"></i><a href="https://www.aboutmonica.com"> https://www.aboutmonica.com</a></li>
+      <li><i class="fab fa-twitter"></i><a href="https://twitter.com/indigitalcolor"> @indigitalcolor</a></li>
     </ul>
     <ul class="list-group list-group-flush">
       <h6>Highlights</h6>
@@ -48,13 +48,11 @@ const displayUserProfile = () => {
 // Displays About Area
 const displayAboutArea = () => {
   const domString = `
-    <h1>Hi, I'm Monica 👋🏾 👩🏾‍💻</h1>
-    <img src="https://raw.githubusercontent.com/M0nica/M0nica/master/gh-header-image-cropped.png" alt="banner that says Monica Powell - software engineer, content creator and community organizer alongside a cartoon illustration of Monica">
-    I'm a software engineer who is passionate about making open-source more accessible, creating technology to elevate people, and building community. Some technologies I enjoy working with include ReactJS, Jamstack (JavaScript, APIs + Markup) and GraphQL. I recently was selected to be an inaugural <a href="https://stars.github.com/">GitHub Star 🌟</a> based on my involvement in the tech community.  My interest in the React ecosystem led me to launch <a href="https://www.meetup.com/React-Ladies/">React Ladies</a>, a community for women and non-binary ReactJS developers.
-    
-    
+    <h1 id="aboutHeader1">Hi, I'm Monica 👋🏾 👩🏾‍💻</h1>
+    <img id="aboutImg" src="https://raw.githubusercontent.com/M0nica/M0nica/master/gh-header-image-cropped.png" alt="banner that says Monica Powell - software engineer, content creator and community organizer alongside a cartoon illustration of Monica">
+    <p id="aboutDescription">I'm a software engineer who is passionate about making open-source more accessible, creating technology to elevate people, and building community. Some technologies I enjoy working with include ReactJS, Jamstack (JavaScript, APIs + Markup) and GraphQL. I recently was selected to be an inaugural <a href="https://stars.github.com/">GitHub Star 🌟</a> based on my involvement in the tech community.  My interest in the React ecosystem led me to launch <a href="https://www.meetup.com/React-Ladies/">React Ladies</a>, a community for women and non-binary ReactJS developers.</p>
     <h2>Find me around the web 🌎:</h2> <a href="https://github.com/sponsors/M0nica"><img align="left" width="150" height="150" src="https://github.com/M0nica/M0nica/blob/main/octomonica/m0nica-octocat-rotating.gif?raw=true"></a>
-    <ul>
+    <ul id="aboutList">
     <li>Learning in public on <a href="https://www.twitch.tv/blacktechdiva">Twitch</a> or <a href="https://www.monica.dev">monica.dev</a> 📹 ✍🏾</li>
     <li>Tinkering with interactions on <a href="https://codepen.io/m0nica"> Codepen</a> 🏓</li>
     <li>Sharing updates on <a href="https://www.linkedin.com/in/monicampowell/">LinkedIn</a> 💼</li>
@@ -110,7 +108,7 @@ const pinnedReposBuilder = (array) => {
 
   array.forEach((repo, i) => {
     domString += `
-      <div class="card" id="pinnedRepo" style="width: 27rem;">
+      <div class="card" id="pinnedRepo" style="width: 35rem;">
         <div class="card-body">
           <h5 class="card-title">${repo.name}</h5>
           <p class="card-text">${repo.description}</p>
