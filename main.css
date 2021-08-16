@@ -180,8 +180,15 @@ h5 {
     border: solid 1px rgb(116, 115, 115);
     padding: 10px;
     font-size: 20px;
-
 }   
+
+.sortBtnContainer{
+    position: absolute;
+    background-color: transparent;
+    top:3px;
+    left:810px;
+}
+   
 
 .cbForm {
     margin-left: -410px;
