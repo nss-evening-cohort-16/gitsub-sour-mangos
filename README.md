@@ -1,10 +1,9 @@
-# GitSub  <!-- REPLACE THIS [![Netlify Status](https://api.netlify.com/api/v1/badges/c9892978-61ce-43b2-86f3-0dabf5ef8b14/deploy-status)](https://app.netlify.com/sites/awc-sorting-hat/deploys) -->
+# GitSub  [![Netlify Status](https://api.netlify.com/api/v1/badges/b535d4c1-2f7a-4d62-a5ae-08b65e95f7b9/deploy-status)](https://app.netlify.com/sites/sour-mangos-gitsub/deploys)
 <!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
 
-In The Sorting Hat project, the users will enter their name and will be sorted into a random house. The user can filter the students by house and can even expel students. Once students are expelled, they will be removed from the First Years and into Voldemort's Army.
-This project is focused on creating an array of objects and printing them to the DOM. The project utilizes loops, event listeners, and filter buttons all built within functions.
+In the world of programming, most know the name "Github". The well-respected site offers an intuitively designed experience for users to store, manage, and track Git repositories. The Gitsub web app is designed by a collaborative team of students to replicate some of the form and functions of Github.
 
-[View App](<!-- INSERT NETLIFY LINK -->)
+[View App](https://sour-mangos-gitsub.netlify.app/)
 
 ## Get Started <!-- OPTIONAL, but doesn't hurt -->
 ```
@@ -12,63 +11,49 @@ $ git clone git@github.com:nss-evening-cohort-16/gitsub-sour-mangos.git
 $ cd gitsub-sour-mangos
 ```
 ## About the User <!-- This is a scaled down user persona -->
-- The ideal user for this application is a professor who wants to sort students into a house based on their beliefs.
-- They want to be able to enter a student's name and have them sorted into a house. 
-- They also want to be able to filter through each house and be able to expel the students if they must.
-- The problem this app solves is it filters students to make it easy navigating through, potentially, a large number of students.
+- The ideal user for this application is any current or hopeful software engineers looking to house and display their projects and applications for potential collaboration and deployment.
+- They want to be able to display their overview page where they can pin created repositories.
+- They also want to have a dedicated repositories page which will house current repos, while also allowing the user to utilize a form to create new repositories.  
+- They also want to have a dedicated projects page which will house current projects, while also allowing the user to utilize a form to create new projects.
+- They also want to have a dedicated packages page which will house current packages, while also allowing the user to utilize a form to create new packages.
+- The problem that this app solves is it houses user's applications, finished or in-progress, in one location that is easily accessible and shareable to co-workers, teammates, and future employers.
 
 ## Features <!-- List your app features using bullets! Do NOT use a paragraph. No one will read that! -->
-- The DOM will populate a welcome message, followed by a form to enter the student's name.
-- The DOM will then populate with filter buttons on top and all of the students in the array.
-- Filter Buttons: There are five buttons (Show All, Gryffindor, Hufflepuff, Ravenclaw, and Slytherin) that will filter each type of house.
-- House Colors: The color of each studnet's card changes depending on the type of house.
-- Expel Button: An expel button is used to remove a student from the student array and into Voldemort's array.
+- Created 4 HTML pages (Overview, Repositories, Projects, and Packages) to replicate the GitHub website
+- Overview: Includes an About Me section and a checkbox form that allows a user to add a pinned repo. You can also delete a pinned repo by unchecking the checkbox.
+- Repositories: Includes a form that allows a user to create a new repo or favorite an existing repo.
+- Projects: Includes a form that allows a user to add a new project. Allows users to search through the projects with a search bar. Users can also sort using the sort tool.
+- Packages: Includes a form that allows a user to add a new package. Users can delete and search through packages.
 
-## Video Walkthrough of Pet Adoption <!-- A loom link is sufficient -->
+## Video Walkthrough of GitSub <!-- A loom link is sufficient -->
 <!-- REPLACE THIS https://www.loom.com/share/c8d85532094a4b48b69199ee2a240804 -->
 
 ## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
-- [Check out the deployed site](<!-- REPLACE THIS -->)
+- [Check out the deployed site](https://sour-mangos-gitsub.netlify.app/)
 - [Wireframes](https://www.figma.com/file/8vIX1yEXd2UxdWARbWqAje/GitSub?node-id=0%3A1)
 - [Project Board](https://github.com/nss-evening-cohort-16/gitsub-sour-mangos/projects/1)
 
 ## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
-This function deletes a student from the array and prints it to the DOM. It will also keep you on the current filter selection.
+This function allows users to search through packages.
 ```
-// Expels a student to Voldy's Army
-const studentExpel = (event) => {
-  const targetId = event.target.id;
-  const targetType = event.target.type;
-
-  if (currentPage !== "all" && targetType === "button") {   // Check if the houses have been filtered and the expel button was pressed
-    const tempArray = students.filter(student => student.house.toLowerCase() === currentPage);    // Filter the houses again and assign it to a temporary array
-    let i = 0;
-    while (i < students.length) {
-      if (students[i] === tempArray[targetId]) {    // Loop through the main array to compare the students in the filtered
-        tempArray.splice(targetId, 1);    // Delete the student from the filtered aray
-        const expelledStudent = students.splice(i, 1);    // Delete the student from the main array
-        voldysArmy.push(expelledStudent[0]);    // Add the expelled student to Voldy's array
-        studentCardBuilder(tempArray);    // Build the filtered array
-        sortByName(voldysArmy);   // Sort cards by name
-        deathEaterCardBuilder(voldysArmy);    // Build Voldy's array 
-        break;    // Break out of the loop;
-      }
-      i++;
-    };
-  } else if (targetType === "button") {
-    expelledStudent = students.splice(targetId, 1);
-    voldysArmy.push(expelledStudent[0]);
-    studentCardBuilder(students);
-    sortByName(voldysArmy);
-    deathEaterCardBuilder(voldysArmy);
-  }
+const search = (e) => {
+    const searchString = e.target.value;
+    const filteredPackages = packages.filter((box) => {
+        return (box.name.includes(searchString));
+    });
+    cardBuilder(filteredPackages);
+    console.log(searchString)
 };
 ```
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-![Welcome](Sorting_Hat_Welcome.PNG)
-![Overview](Sorting_Hat_Overview.PNG)
-![Filter](Sorting_Hat_Filter.PNG)
+![GitSub_Overview](https://user-images.githubusercontent.com/83558122/129643854-c4c30b7a-de88-4a39-a8a5-e9cabca1b5fb.PNG)
+![RepositoriesScreenshot](https://user-images.githubusercontent.com/83558122/129643970-18ddead5-5c56-4630-a8c3-46b0fe728993.png)
+![GitsubScreenShot](https://user-images.githubusercontent.com/78558344/129642202-e5862aee-49bb-48e1-825e-112839bab957.png)
+![PackagesScreenshot](https://user-images.githubusercontent.com/83558122/129643917-9ec6aa30-11b8-4df8-94a4-55ccd2ff64f1.png)
 
 ## Contributors
 - [Albert Chittaphong](https://github.com/albertchitta)
+- [Meredith Marcum](https://github.com/butterbeerbeginner)
+- [Grace Sutherland](https://github.com/rgs1690)
+- [Halie Dyer](https://github.com/DyerHL)
