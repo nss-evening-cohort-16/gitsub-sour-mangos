@@ -211,10 +211,15 @@ h5 {
     border: solid 1px rgb(116, 115, 115);
     border-radius: 10px;
     justify-content: center;
-    width: 1620px !important;
+    width: 1400px !important;
     height: 900px;
     margin-top: -50px;
     padding-left: 20px;
+}
+
+#aboutImg {
+    object-fit: contain;
+    max-width: 98%;
 }
 
 #aboutHeader { 
