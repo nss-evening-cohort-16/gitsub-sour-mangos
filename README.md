@@ -1,4 +1,4 @@
-# GitSub  [![Netlify Status](https://api.netlify.com/api/v1/badges/b535d4c1-2f7a-4d62-a5ae-08b65e95f7b9/deploy-status)](https://app.netlify.com/sites/sour-mangos-gitsub/deploys)
+# GitSub  [![Netlify Status](https://api.netlify.com/api/v1/badges/4906406a-a6f6-4ea6-a51c-fccd461fd8bb/deploy-status)](https://app.netlify.com/sites/sour-mangos-gitsub/deploys)
 <!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
 
 In the world of programming, most know the name "Github". The well-respected site offers an intuitively designed experience for users to store, manage, and track Git repositories. The Gitsub web app is designed by a collaborative team of students to replicate some of the form and functions of Github.
