@@ -1,33 +1,5 @@
 import { repos } from "./dataArray.js";
 
-// const repos = [
-//   {
-//     name: "Pies",
-//     view: "Public",
-//     description: "Added",
-//   },
-//   {
-//     name: "Sorting Hat",
-//     view: "Public",
-//     description:"Added"
-//   },
-//   {
-//     name: "Space Travel",
-//     view: "Public",
-//     description:"Added"
-//   },
-//   {
-//     name: "Pet Adoption",
-//     view: "Public",
-//     description:"Added"
-//   },
-//   {
-//     name: "Good Vibes Only",
-//     view: "Public",
-//     description:"Added"
-//   }
-// ];
-
 // Displays User Profile
 const displayUserProfile = () => {
   const domString = `
@@ -68,21 +40,26 @@ const displayUserProfile = () => {
 };
 
 const repoFunction = (array) => {
-  let domString = ""
-  array.forEach((repo) => {
-    domString += 
-    `<div class="card">
-    <h5 class="card-header">Repository-<button onclick="starFunction()" type="button" class="btn btn-primary">☆</button></h5>
+  let domString = "";
+  array.forEach((repo, i) => {
+    domString += `<div class="card">
+    <h5 class="card-header">Repository</h5>
     <div class="card-body">
       <h5 class="card-title">${repo.name}</h5>
       <p class="card-text">${repo.description}</p>
       <p class="card-text">${repo.view}</p>
+      <button id="green-btn--${i}" type="button" class="btn ${
+      !repo.star ? "btn-success" : "btn-primary"
+    }">☆</button>
     </div>
-    </div>`
-  })
+    </div>`;
+  });
 
   renderToDom("#repoContainer", domString);
 
+  document
+    .querySelector("#repoContainer")
+    .addEventListener("click", starFunction);
 };
 
 const renderToDom = (divId, textToPrint) => {
@@ -94,28 +71,31 @@ const repoCallback = (event) => {
   event.preventDefault();
   const newRepo = {
     name: document.querySelector("#infoInput").value,
-    description: document.querySelector("#descriptionInput").value
-  }
+    description: document.querySelector("#descriptionInput").value,
+  };
   repos.push(newRepo);
 
   repoFunction(repos);
-
 };
 
-  const repoBtn = () => {
-    const repoBtns = document.querySelector("#formContainer");
-    repoBtns.addEventListener("submit", repoCallback);
-  };
+const repoBtn = () => {
+  const repoBtns = document.querySelector("#formContainer");
+  repoBtns.addEventListener("submit", repoCallback);
+};
 
-  const starFunction = () => {
-  }
-
-  const init = () => {
-    displayUserProfile();
+const starFunction = (e) => {
+  if (e.target.id.startsWith("green-btn")) {
+    const [, id] = e.target.id.split("--");
+    console.log(id);
+    repos[id].star = true;
     repoFunction(repos);
-    repoBtn();
-  };
+  }
+};
 
-  init();
+const init = () => {
+  displayUserProfile();
+  repoFunction(repos);
+  repoBtn();
+};
 
-  
+init();
